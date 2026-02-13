@@ -15,24 +15,18 @@ This repository includes the changes to the Atlite library to support the new da
 ### Repository Structure
 
 atlite/
-
-├── era5_land_EDA (this is where I perform my analysis after the extension to Atlite)
-
-   ├── data (this contains the data downloaded from the era5_land_EDA.ipynb and other files I need for analysis/visualization)
-
-   ├── era5_land_EDA.ipynb (notebook where the EDA is performed after ERA5 Land extension to Atlite)
-
-├── atlite
-
-   ├── datasets
-
-      ├── __init__.py (where I added a new dataset to atlite supported datasets)
-
-      ├── era5_land.py (where I added the new datasset functionality)
-      
-   ├── other atlite foler/files
-
-├── other atlite foler/files
+├── era5_land_EDA/                          # Analysis after extending Atlite
+│   ├── data/                               # Downloaded ERA5-Land data + files for plots
+│   └── era5_land_EDA.ipynb                 # Notebook for post-extension EDA
+│
+├── atlite/
+│   ├── datasets/
+│   │   ├── __init__.py                     # Added ERA5-Land to supported datasets registry
+│   │   └── era5_land.py                    # New ERA5-Land dataset module implementation
+│   │
+│   └── ...                                 # Other Atlite files
+│
+└── ...                                     # Other project files
 
 
 To reproduce the findings in the notebooks:
